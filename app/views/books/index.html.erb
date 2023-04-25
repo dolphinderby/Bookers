@@ -9,16 +9,16 @@
 <% @books.each do |book| %>
 
 
-  <span><%= book.title %></span>
+  <table><%= book.title %></table>
 
 
-  <span><%= book.body %></span>
+  <table><%= book.body %></table>
 
-  <span>
+  <table>
     <%= link_to "Show", book_path(book.id) %>
     <%= link_to "Edit", edit_book_path(book.id) %>
     <%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
-  </span>
+  </table>
 <% end %>
 
 <h2>New book</h2>
